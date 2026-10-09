@@ -3,35 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crease &amp; Fold</title>
+<title>Nam Vo</title>
+<meta name="description" content="Nam Vo builds small, careful apps: Crease &amp; Fold, a calm origami puzzle, and Universe Explorer, a true-to-scale space explorer for kids.">
+<meta property="og:title" content="Nam Vo">
+<meta property="og:description" content="Small, careful apps: Crease &amp; Fold and Universe Explorer.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://namvohoang.github.io/">
+<link rel="icon" href="/assets/crease.png">
 <style>
-  :root{--bg:#ECECE8;--panel:#F9F9F7;--text:#33373D;--muted:#6B7078;--accent:#6f7f5e;--border:#E0E0DA;}
-  @media (prefers-color-scheme:dark){:root{--bg:#14161A;--panel:#1D2025;--text:#E6E7E9;--muted:#9AA0A8;--accent:#8ea079;--border:#2A2E34;}}
-  *{box-sizing:border-box;}html,body{margin:0;padding:0;}
-  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem;}
-  main{max-width:34rem;text-align:center;}
-  .glyph{width:72px;height:72px;margin:0 auto 1.5rem;border-radius:18px;background:var(--accent);display:flex;align-items:center;justify-content:center;}
-  .glyph span{display:block;width:26px;height:34px;background:var(--panel);border-radius:3px;}
-  h1{font-size:2.25rem;font-weight:600;letter-spacing:-0.02em;margin:0 0 0.5rem;}
-  .tag{color:var(--muted);font-size:1.1rem;margin:0 0 2rem;}
-  p{color:var(--text);margin:0 auto 1.25rem;max-width:30rem;}
-  .links{margin-top:2rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
-  a.btn{display:inline-block;padding:0.7rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid var(--border);color:var(--text);background:var(--panel);}
-  a.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
-  footer{margin-top:3rem;color:var(--muted);font-size:0.8rem;}
-  footer a{color:var(--muted);}
+  :root{--bg:#F4F2EC;--panel:#FBFAF6;--text:#26292E;--muted:#6A6E75;--accent:#5C6F4C;--border:#DEDBD1;}
+  @media (prefers-color-scheme:dark){:root{--bg:#131518;--panel:#1B1E22;--text:#E7E6E1;--muted:#989DA5;--accent:#A3B68D;--border:#2B2F35;}}
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  main{max-width:42rem;margin:0 auto;padding:clamp(3rem,12vh,7rem) 1.25rem 3rem;}
+  .eyebrow{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 1rem;}
+  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:clamp(2.75rem,9vw,4.25rem);font-weight:500;line-height:1.05;letter-spacing:-0.02em;margin:0 0 1.5rem;}
+  .lede{font-size:1.2rem;line-height:1.55;max-width:32rem;margin:0;text-wrap:pretty;}
+  nav.contact{display:flex;flex-wrap:wrap;gap:0.25rem 1.5rem;margin-top:2rem;}
+  nav.contact a{display:inline-flex;align-items:center;min-height:48px;color:var(--text);font-weight:600;text-decoration:underline;text-decoration-color:var(--border);text-decoration-thickness:2px;text-underline-offset:5px;transition:text-decoration-color .15s;}
+  nav.contact a:hover{text-decoration-color:var(--accent);}
+  h2{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:4.5rem 0 1rem;}
+  ul.work{list-style:none;margin:0;padding:0;display:grid;gap:1rem;}
+  .card{display:grid;grid-template-columns:72px 1fr;gap:1.25rem;padding:1.25rem;background:var(--panel);border:1px solid var(--border);border-radius:20px;}
+  .card img{width:72px;height:72px;border-radius:16px;display:block;}
+  .card h3{font-size:1.2rem;font-weight:600;letter-spacing:-0.01em;margin:0;}
+  .card .kind{color:var(--muted);font-size:0.9rem;margin:0.1rem 0 0.6rem;}
+  .card p{margin:0;text-wrap:pretty;}
+  .card .links{display:flex;flex-wrap:wrap;gap:0 1.25rem;margin-top:0.5rem;}
+  .card .links a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-weight:600;text-decoration:none;}
+  .card .links a:hover{text-decoration:underline;text-underline-offset:4px;}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+  footer{margin-top:4.5rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.85rem;}
+  @media (max-width:26rem){.card{grid-template-columns:56px 1fr;gap:1rem;}.card img{width:56px;height:56px;border-radius:13px;}}
 </style>
 </head>
 <body>
 <main>
-  <div class="glyph"><span></span></div>
-  <h1>Crease &amp; Fold</h1>
-  <p class="tag">A calm origami folding puzzle.</p>
-  <p>Swipe to crease and fold flat paper to match each target shape — one thoughtful move at a time. Clear chapters to collect a menagerie of origami animals. Three modes, a daily fold, and fully offline.</p>
-  <div class="links">
-    <a class="btn" href="/crease-privacy/">Privacy Policy</a>
-  </div>
-  <footer>© 2026 Nam Vo · <a href="mailto:hoangnam.hcmut@gmail.com">hoangnam.hcmut@gmail.com</a></footer>
+  <p class="eyebrow">Software developer</p>
+  <h1>Nam Vo</h1>
+  <p class="lede">I build small, careful apps that work offline, ask for no account, and respect the people using them.</p>
+  <nav class="contact" aria-label="Contact">
+    <a href="mailto:hoangnam.hcmut@gmail.com">Email</a>
+    <a href="https://github.com/namvohoang" rel="me">GitHub</a>
+    <a href="https://www.linkedin.com/in/nam-hoang-vo-74868568/" rel="me">LinkedIn</a>
+  </nav>
+
+  <h2>Work</h2>
+  <ul class="work">
+    <li class="card">
+      <img src="/assets/crease.png" alt="" width="72" height="72">
+      <div>
+        <h3>Crease &amp; Fold</h3>
+        <p class="kind">Origami puzzle game · iPhone and iPad</p>
+        <p>Swipe to crease and fold flat paper to match each target shape, one thoughtful move at a time. Clear chapters to collect a menagerie of origami animals.</p>
+        <div class="links">
+          <a href="https://apps.apple.com/us/app/crease-fold-origami-puzzle/id6795002658">App Store</a>
+          <a href="/crease/">About</a>
+        </div>
+      </div>
+    </li>
+    <li class="card">
+      <img src="/assets/universe-explorer.png" alt="" width="72" height="72">
+      <div>
+        <h3>Universe Explorer</h3>
+        <p class="kind">3D space explorer for kids aged 6 to 9 · Web</p>
+        <p>Tap a planet, moon or galaxy to fly there, see what it really looks like, and compare how big and how far things are. Real numbers from cited sources, with no ads and no tracking.</p>
+        <div class="links">
+          <a href="/universe-explorer/">Open it</a>
+          <a href="https://github.com/namvohoang/universe-explorer">Source</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <footer>© 2026 Nam Vo</footer>
 </main>
 </body>
 </html>
